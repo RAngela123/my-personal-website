@@ -85,4 +85,203 @@
     .hero-name {
       font-size: clamp(48px, 12vw, 80px);
       font-weight: 900;
-      line-height: 0.9
+      line-height: 0.95;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      word-break: break-word;
+    }
+
+    .hero-meta {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      color: #333333;
+    }
+
+    .hero-intro {
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.6;
+      border-left: 2px solid #000000;
+      padding-left: 16px;
+      margin-top: 20px;
+    }
+
+    /* 2. About Me Section */
+    .about-content {
+      font-size: 16px;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    /* 3. Skills Section */
+    .skills-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill-tag {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border: 1px solid #000000;
+      padding: 8px 16px;
+      background: transparent;
+      text-transform: uppercase;
+    }
+
+    /* 4. Experiences Section */
+    .experiences-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .exp-card {
+      border-top: 1px solid #000000;
+      padding-top: 16px;
+    }
+
+    .exp-number {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .exp-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .exp-desc {
+      font-size: 15px;
+      color: #222222;
+    }
+
+    /* 5. Contact Button */
+    .contact-section {
+      text-align: center;
+      padding-top: 16px;
+      padding-bottom: 32px;
+    }
+
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      width: 100%;
+      padding: 12px 32px;
+      background-color: #000000;
+      color: #F4F0EA;
+      font-family: 'Noto Serif TC', serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid #000000;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .btn-contact:hover {
+      background-color: #F4F0EA;
+      color: #000000;
+    }
+
+    /* RWD Media Query: 768px and wider */
+    @media (min-width: 768px) {
+      .container {
+        max-width: 720px;
+        padding: 64px 0;
+      }
+
+      .experiences-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .btn-contact {
+        width: auto;
+        min-width: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <span class="issue-tag">Vol. 01 — Portfolio</span>
+      <h1 class="hero-name">安琪拉</h1>
+      <div class="hero-meta">Hsing Wu University</div>
+      <p class="hero-intro">“Passionate about software development, design, and continuous learning.”</p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- About Me Section -->
+    <section>
+      <h2 class="section-title">About Me</h2>
+      <p class="about-content">
+        A dedicated student at Hsing Wu University specializing in software application development, web systems, and creative technology solution design.
+      </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Skills Section -->
+    <section>
+      <h2 class="section-title">Skills</h2>
+      <ul class="skills-list">
+        <li class="skill-tag">Python</li>
+        <li class="skill-tag">C# / .NET</li>
+        <li class="skill-tag">ASP.NET Core</li>
+        <li class="skill-tag">WPF / Blazor</li>
+        <li class="skill-tag">SQLite</li>
+      </ul>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Experiences Section -->
+    <section>
+      <h2 class="section-title">Experiences</h2>
+      <div class="experiences-grid">
+        
+        <article class="exp-card">
+          <span class="exp-number">01 /</span>
+          <h3 class="exp-title">Software Development</h3>
+          <p class="exp-desc">Built web API services, desktop tools, and interactive UI projects using C#, WPF, and Python.</p>
+        </article>
+
+        <article class="exp-card">
+          <span class="exp-number">02 /</span>
+          <h3 class="exp-title">Academic Projects</h3>
+          <p class="exp-desc">Designed database-driven application prototypes with SQLite integration and modern web frameworks.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <a href="mailto:your-email@example.com" class="btn-contact">Contact Me</a>
+    </section>
+
+  </main>
+
+</body>
+</html>
